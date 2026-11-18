@@ -12,7 +12,7 @@ The dataset used in the AI for Excel Demo Day live demo.
 | Columns | 8 |
 | File | `wholesale-customers.xlsx` |
 | Source | UCI ML Repository (Cardoso, 2014) |
-| Original currency | Monetary units (m.u.) — the original Cardoso paper used Portuguese euros |
+| Original currency | Monetary units (m.u.) — do not assume US dollars |
 
 ## Columns
 
@@ -77,7 +77,7 @@ Three things make this dataset perfect for showing where AI in Excel stumbles:
 2. **There is no "sales" column.** Spend is split across six product categories. "Total sales by channel" requires building a derived column first.
 3. **The data is wide, not tidy.** Six spend columns per row means the tool has to figure out which columns to add, in which order, with which grouping. That's a deterministic-tool job (Power Query), not a probabilistic-tool job.
 
-These three quirks are why "Find total sales by channel" in Analyze Data returns something confidently wrong — and why the Power Query fix (replace the codes, unpivot the six spend columns, group by channel) is the lesson the hour is built around.
+These three quirks are why "Find total sales by channel" in Analyze Data can produce an unhelpful or misleading answer — and why the Power Query fix (replace the codes, unpivot the six spend columns, group by channel) is the lesson the session is built around.
 
 ## Citation
 
